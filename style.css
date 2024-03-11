@@ -1,0 +1,210 @@
+/* I selettori CSS ti aiutano a selezionare elementi HTML tramite CSS e
+JavaScript.
+
+Con questi esercizi farai pratica nell'utilizzarli sia per modificare lo
+stile di elementi HTML sia nel selezionarli per manipolarli via JavaScript
+I selettori CSS sono estremamente utili per selezionare nodi del DOM con
+precisione grazie al fatto che funzionano perfettamente con querySelector,
+senza necessità di scrivere algoritmi più complessi per arrivare allo
+stesso risultato.
+
+
+IMPORTANTE: NON PUOI inserire classi o id aggiuntivi nell'HTML,
+devi usare solo quello che già c'è.
+Non puoi cambiare la struttura in nessuna maniera.
+L'obiettivo è quello di usare Selettori e Combinatori per arrivare a
+selezionare l'elemento di interesse per poi manipolarlo nello stile o
+nella struttura con JS.
+
+Per testare i Selettori CSS puoi cambiare all'elemento che stai cercando di
+selezionare il colore, colore di sfondo, aggiungere un bordo colorato ecc.
+Se il selettore è corretto vedrai applicare quello stile all'elemento,
+se non succede significa che il selettore non è corretto o qualche altra
+regola CSS sta prevalendo. Controlla sempre dall'inspector del browser.
+*/
+
+/*
+ESERCIZIO 1)
+Crea un selettore per selezionare l'<h1> nella sezione "hero",
+ovvero nel jumbotron
+*/
+/* 
+.display-4 {
+    color: purple;
+}
+
+.jumbotron h1 {
+    color: brown;
+}
+ 
+.display-4.font-italic {
+    color:blue;
+} */
+ 
+.col-md-6 h1 {
+    color: red;
+}
+
+.jumbotron .col-md-6 h1 {
+    color:yellow;
+}
+
+.jumbotron.p-4.p-md-5.rounded h1 {
+    color:green;
+}
+
+.jumbotron.p-4.p-md-5.rounded .col-md-6.px-0 h1 {
+    color:fuchsia;
+}
+
+
+/*
+ESERCIZIO 2) Crea un selettore per selezionare tutti i figli dell'elemento
+navbar
+*/
+/*
+.nav.d-flex.justify-content-between.mb-2 span {
+    color:cornflowerblue;
+} /*vince questa 
+
+.nav span {
+    color:coral;
+}
+
+.nav span:nth-of-type(1), .nav span:nth-of-type(2), .nav span:nth-of-type(3),
+.nav span:nth-of-type(4), .nav span:nth-of-type(5), .nav span:nth-of-type(6),
+.nav span:nth-of-type(7), .nav span:nth-of-type(8), .nav span:nth-of-type(9),
+.nav span:nth-of-type(10), .nav span:nth-of-type(11), .nav span:nth-of-type(12) {
+ color:bisque;
+}
+
+.nav span:nth-child(1), .nav span:nth-child(2), .nav span:nth-child(3),
+.nav span:nth-child(4), .nav span:nth-child(5), .nav span:nth-child(6),
+.nav span:nth-child(7), .nav span:nth-child(8), .nav span:nth-child(9),
+.nav span:nth-child(10), .nav span:nth-child(11), .nav span:nth-child(12) {
+    color:chartreuse;
+}
+
+.nav :nth-of-type(1), .nav :nth-of-type(2), .nav :nth-of-type(3),
+.nav :nth-of-type(4), .nav :nth-of-type(5), .nav :nth-of-type(6),
+.nav :nth-of-type(7), .nav :nth-of-type(8), .nav :nth-of-type(9),
+.nav :nth-of-type(10), .nav :nth-of-type(11), .nav :nth-of-type(12) {
+ color:burlywood;
+}
+
+.nav :nth-child(1), .nav :nth-child(2), .nav :nth-child(3),
+.nav :nth-child(4), .nav :nth-child(5), .nav :nth-child(6),
+.nav :nth-child(7), .nav :nth-child(8), .nav :nth-child(9),
+.nav :nth-child(10), .nav :nth-child(11), .nav :nth-child(12) {
+ color:aqua;
+} */
+
+/*
+ESERCIZIO 3) Crea un selettore per selezionare il link "Continua a leggere"
+del jumbotron
+*/
+
+.jumbotron a{
+    color:blueviolet;
+}
+
+.jumbotron.p-4.p-md-5.rounded a{
+    color:chocolate;
+}
+
+.jumbotron .col-md-6 a {
+    color:crimson;
+}
+
+.jumbotron.p-4.p-md-5.rounded .col-md-6 a {
+    color:darkblue;
+}
+
+.jumbotron.p-4.p-md-5.rounded .col-md-6.px-0 a {
+    color:darkcyan;
+}
+
+.jumbotron.p-4.p-md-5.rounded .col-md-6.px-0 .lead.mb-0 a {
+    color:darkgoldenrod;
+}
+
+/*
+ESERCIZIO 4) Crea un selettore per selezionare il primo blog post
+*/
+
+/*ESEMPIO DI BLOG POST?*/
+
+.col-md-8.blog-main .blog-post:first-of-type {
+    background-color: darkgreen;
+}
+
+/*
+ESERCIZIO 5) Crea un selettore per selezionare l'<hr> del primo blog post e
+colorarlo di rosso
+*/
+
+.col-md-8.blog-main .blog-post:first-of-type hr::before {
+    /* content: "Trovato!"; */
+    color:red;
+}
+
+/*
+ESERCIZIO 6) Crea un selettore per selezionare i link pari della navbar
+*/
+
+.nav :nth-of-type(even) {
+    color:darkkhaki;
+}
+
+/*
+ESERCIZIO 7) Crea un selettore per selezionare tutti gli <li> della prima
+"ordered-list" della sidebar ("Archivio")
+*/
+
+.p-4 .list-unstyled.mb-0 li {
+    background-color:darkmagenta;
+}
+
+/*
+ESERCIZIO 8) Crea un selettore per selezionare l'autore del secondo blog
+post
+*/
+
+.blog-main .blog-post:nth-child(3) .blog-post-meta a {
+    background-color:darkorchid;
+}
+
+/*
+ESERCIZIO 9) Crea un selettore per selezionare il secondo <li> della lista
+del terzo blog post
+*/
+
+.blog-main .blog-post:nth-child(4) ul li:nth-child(2) {
+    color:darkred;
+}
+
+/*
+ESERCIZIO 10) Crea un selettore per selezionare il link "Torna su" che
+trovi a fondo pagina nell'angolo in basso a destra
+*/
+
+.float-right.mb-3.mr-3 {
+    background-color: firebrick;
+}
+
+/*
+ESERCIZIO 11) Crea un selettore per selezionare il bottone "Nuovi" che
+trovi in basso
+*/
+
+.blog-pagination a:last-child {
+    background-color: gold;
+}
+
+/*
+ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
+*/
+
+footer a:last-child {
+    color:greenyellow;
+}
