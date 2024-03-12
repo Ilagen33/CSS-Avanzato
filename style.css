@@ -28,49 +28,59 @@ ESERCIZIO 1)
 Crea un selettore per selezionare l'<h1> nella sezione "hero",
 ovvero nel jumbotron
 */
-/* 
+
+/*Richiamo la classe dell'h1*/
 .display-4 {
     color: purple;
 }
 
+/*Richiamo una classe del div in cui si trova l'h1 (e l'h1)*/
 .jumbotron h1 {
     color: brown;
 }
  
+/*Richiamo tutte le classi dell'h1*/
 .display-4.font-italic {
     color:blue;
-} */
+}
  
+/*Richiamo una classe del div in cui si trova l'h1 ()e l'h1*/
 .col-md-6 h1 {
     color: red;
 }
 
+
+/*Richiamo la classe del div in cui si trova il div che contiene l'h1 (e l'h1)*/
 .jumbotron .col-md-6 h1 {
     color:yellow;
 }
 
+/*RRichiamo tutte le classi del div che contiene il div in cui si trova l'h1  (senza richiamare il div interno)*/
 .jumbotron.p-4.p-md-5.rounded h1 {
     color:green;
 }
 
+/*Versione estesa, richiamo tutte le classi del div in cui c'è un duv di cui richiamo tutte le classi in cui prendo l'h1*/
 .jumbotron.p-4.p-md-5.rounded .col-md-6.px-0 h1 {
     color:fuchsia;
 }
-
 
 /*
 ESERCIZIO 2) Crea un selettore per selezionare tutti i figli dell'elemento
 navbar
 */
-/*
+
+/*Richiamo tuttw le classi del div in cui prenod gli span*/
 .nav.d-flex.justify-content-between.mb-2 span {
     color:cornflowerblue;
-} /*vince questa 
+} /*vince questa*/ 
 
+/*Richiamo una classe del div in cui prendo gli span*/
 .nav span {
     color:coral;
 }
 
+/*Tentativo con span:nth-last-of-type()*/
 .nav span:nth-of-type(1), .nav span:nth-of-type(2), .nav span:nth-of-type(3),
 .nav span:nth-of-type(4), .nav span:nth-of-type(5), .nav span:nth-of-type(6),
 .nav span:nth-of-type(7), .nav span:nth-of-type(8), .nav span:nth-of-type(9),
@@ -78,6 +88,7 @@ navbar
  color:bisque;
 }
 
+/*Tentativo con span:nth-child()*/
 .nav span:nth-child(1), .nav span:nth-child(2), .nav span:nth-child(3),
 .nav span:nth-child(4), .nav span:nth-child(5), .nav span:nth-child(6),
 .nav span:nth-child(7), .nav span:nth-child(8), .nav span:nth-child(9),
@@ -85,6 +96,7 @@ navbar
     color:chartreuse;
 }
 
+/*Tentativo con :nth-last-of-type()*/
 .nav :nth-of-type(1), .nav :nth-of-type(2), .nav :nth-of-type(3),
 .nav :nth-of-type(4), .nav :nth-of-type(5), .nav :nth-of-type(6),
 .nav :nth-of-type(7), .nav :nth-of-type(8), .nav :nth-of-type(9),
@@ -92,47 +104,59 @@ navbar
  color:burlywood;
 }
 
+/*Tentativo con :nth-child()*/
 .nav :nth-child(1), .nav :nth-child(2), .nav :nth-child(3),
 .nav :nth-child(4), .nav :nth-child(5), .nav :nth-child(6),
 .nav :nth-child(7), .nav :nth-child(8), .nav :nth-child(9),
 .nav :nth-child(10), .nav :nth-child(11), .nav :nth-child(12) {
  color:aqua;
-} */
+}
 
 /*
 ESERCIZIO 3) Crea un selettore per selezionare il link "Continua a leggere"
 del jumbotron
 */
 
+/*Richiamo una classe del div in cui è contenuto a*/
 .jumbotron a{
     color:blueviolet;
 }
 
+/*Richiamo tutte le classi del div in cui è contenuto a*/
 .jumbotron.p-4.p-md-5.rounded a{
     color:chocolate;
 }
 
+/*Richiamo una classe del div in cui si richiama una classe del div in cui è contenuto a*/
 .jumbotron .col-md-6 a {
     color:crimson;
 }
 
+/*Richiamo tutte le classi del div in cui si richiaa una classe del div in cui è contenuro a*/
 .jumbotron.p-4.p-md-5.rounded .col-md-6 a {
     color:darkblue;
 }
 
+/*Richiamo tutte le classe del div in cui si richiamano tutte le classi del div in cui è contenuto a*/
 .jumbotron.p-4.p-md-5.rounded .col-md-6.px-0 a {
     color:darkcyan;
 }
 
+/*Richiamo tutte le classi del div in cui si richiamano tutte le classi del div in cui si richiamano tutte le classi del div in cui è contenuto a*/
 .jumbotron.p-4.p-md-5.rounded .col-md-6.px-0 .lead.mb-0 a {
     color:darkgoldenrod;
 }
+
+/*La smetto di fare trentamila casi*/
 
 /*
 ESERCIZIO 4) Crea un selettore per selezionare il primo blog post
 */
 
 /*ESEMPIO DI BLOG POST?*/
+/*richiamo tutte la classi del div che contiente i diversi blog
+Richiamo al suo interno il primo div con classe blog-post a cui (non richiesto)
+modifico il background-color (non richiesto)*/
 
 .col-md-8.blog-main .blog-post:first-of-type {
     background-color: darkgreen;
@@ -141,6 +165,17 @@ ESERCIZIO 4) Crea un selettore per selezionare il primo blog post
 /*
 ESERCIZIO 5) Crea un selettore per selezionare l'<hr> del primo blog post e
 colorarlo di rosso
+*/
+
+/*
+Richiamo tutte le classi del div che contiene i diversi blog
+rRichiamo al suo interno il primo div con classe blog-post
+in cui (non richiesto) inserisco in hr, prima di ciò che si trova al suo interno
+la frase "Trovato!"
+
+In seguito la coloro di rosso (come richiesto)
+
+(Essendo vuoto ho inserito qualcosa da colorare)
 */
 
 .col-md-8.blog-main .blog-post:first-of-type hr::before {
@@ -152,6 +187,9 @@ colorarlo di rosso
 ESERCIZIO 6) Crea un selettore per selezionare i link pari della navbar
 */
 
+/*Richiamo la nav di cui 
+coloro i link pari  (non richiesto)*/
+
 .nav :nth-of-type(even) {
     color:darkkhaki;
 }
@@ -160,6 +198,9 @@ ESERCIZIO 6) Crea un selettore per selezionare i link pari della navbar
 ESERCIZIO 7) Crea un selettore per selezionare tutti gli <li> della prima
 "ordered-list" della sidebar ("Archivio")
 */
+
+/*Richiamo la classe del div in cui richiamo la classe della lista non ordinata in cui 
+do un background-color a tutti gli li (non richiesto)*/
 
 .p-4 .list-unstyled.mb-0 li {
     background-color:darkmagenta;
@@ -170,6 +211,11 @@ ESERCIZIO 8) Crea un selettore per selezionare l'autore del secondo blog
 post
 */
 
+/*Richiamo la classe del div che contiene i blog
+richiamo il blog numero 3
+e richiamo il div in cui 
+vado a modificare il background-color di a (non richiesto)*/
+
 .blog-main .blog-post:nth-child(3) .blog-post-meta a {
     background-color:darkorchid;
 }
@@ -178,6 +224,12 @@ post
 ESERCIZIO 9) Crea un selettore per selezionare il secondo <li> della lista
 del terzo blog post
 */
+
+/*Richiamo la classe del div che contiene i blog
+richiamo il blog numero 4
+richiamo la lista non ordinata al suo interno
+di cui richiamo solo il secondo elemento li
+di cui cambio il colore (non richiesto)*/
 
 .blog-main .blog-post:nth-child(4) ul li:nth-child(2) {
     color:darkred;
@@ -188,6 +240,11 @@ ESERCIZIO 10) Crea un selettore per selezionare il link "Torna su" che
 trovi a fondo pagina nell'angolo in basso a destra
 */
 
+/*In questo caso le classi sono uniche (tutte insieme) per cui per modificare il link "Torna su"
+mi basta richiamre le sue classi (a)*/
+
+/*Modifico il background-color (non richiesto)*/
+
 .float-right.mb-3.mr-3 {
     background-color: firebrick;
 }
@@ -197,6 +254,10 @@ ESERCIZIO 11) Crea un selettore per selezionare il bottone "Nuovi" che
 trovi in basso
 */
 
+/*Richiamo una classe del div in cui sono presenti gli "a" usati come bottoni
+di cui prendo l'ultimo a e 
+le modifico il background-color (non richiesto)*/
+
 .blog-pagination a:last-child {
     background-color: gold;
 }
@@ -205,6 +266,13 @@ trovi in basso
 ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
 */
 
+/*Richiamo il tag fooer di cui 
+modifico il colore dell'ultimo a (il secondo) (non richiesto)*/
+
 footer a:last-child {
     color:greenyellow;
+}
+
+.col-md-4.blog-sidebar .p-4:last-child li:nth-child(2){
+    background-color: hotpink;
 }
